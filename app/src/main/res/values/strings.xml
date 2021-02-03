@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">EasyA</string>
+    <string name="password_etd">Mot de passe</string>
+
+    <string-array name="Niveaux">
+        <item>           </item>
+        <item>Licence SMI</item>
+        <item>Licence SMA</item>
+        <item>Master STRI</item>
+        <item>Master ISI </item>
+        <item>Master EIREE</item>
+        <item>Doctorats Maths et informatiques</item>
+    </string-array>
+
 </resources>
