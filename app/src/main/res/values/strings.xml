@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">EasyA</string>
     <string name="password_etd">Mot de passe</string>
+    <string name="btn_etudiant">Etudiant</string>
+    <string name="btn_volontaire">Volontaire</string>
 
     <string-array name="Niveaux">
         <item>           </item>

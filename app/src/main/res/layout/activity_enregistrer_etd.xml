@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Enregistrer_etd">
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/logo_app"
+    ></ImageView>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nom_etd"
+
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:hint="Nom complet"
+            android:inputType="textPersonName"
+            android:paddingLeft="80dp"
+            android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="-55dp"
+            android:background="@drawable/ic_name"></ImageView>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mail_etd"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:hint="Mot de passe"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10dp"
+            android:paddingLeft="80dp"
+            android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
+
+        <ImageView
+            android:id="@+id/ic_mail"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="-55dp"
+            android:background="@drawable/ic_mail"></ImageView>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="10dp"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_etd"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:hint="@string/password_etd"
+            android:inputType="textPassword"
+            android:paddingStart="10dp"
+            android:paddingLeft="100dp"
+            android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
+
+        <ImageView
+            android:id="@+id/ic_lock"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="-55dp"
+            android:background="@drawable/ic_lock"></ImageView>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/selectionne_niveau_etd"
+        android:layout_width="match_parent"
+
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="Selectionne ton niveau"
+        android:textColor="@color/black"
+        android:textSize="14sp"></com.google.android.material.textview.MaterialTextView>
+
+    <ImageView
+        android:id="@+id/grade_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-40dp"
+        app:srcCompat="@drawable/ic_grade_foreground"
+        tools:ignore="VectorDrawableCompat" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:entries="@array/Niveaux"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:spinnerMode="dialog"
+        android:splitMotionEvents="true"
+        >
+    </Spinner>
+
+    <Button
+        android:id="@+id/bouton_enregistrer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enregistrer"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
