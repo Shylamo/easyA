@@ -2,7 +2,6 @@ package android.example.easya;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
@@ -40,7 +39,7 @@ public class inscription_fragment extends Fragment {
         btn_etd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), Enregistrer_etd.class));
+                startActivity(new Intent(getActivity(), enregistrer_etd.class));
             }
         });
 

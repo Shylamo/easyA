@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyA">
         <activity android:name=".enregistrer_vol"></activity>
-        <activity android:name=".Enregistrer_etd" />
+        <activity android:name=".enregistrer_etd" />
         <activity android:name=".MainActivity" />
         <activity android:name=".inscription_fragment" />
         <activity android:name=".identification_fragment" />

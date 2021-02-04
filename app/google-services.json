@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "155299550374",
+    "project_id": "easya-register-etd",
+    "storage_bucket": "easya-register-etd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155299550374:android:32c3dd84f8dff6b5c6d067",
+        "android_client_info": {
+          "package_name": "android.example.easya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155299550374-c1c7oaeqg7bq20lv0pa8bkdqakchc25q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5wsj7bbm99VUot5fXk5-OIKh6WQIKDEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155299550374-c1c7oaeqg7bq20lv0pa8bkdqakchc25q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
