@@ -7,5 +7,6 @@
     <color name="tabtextcolor">#FFFFFFFF</color>
     <color name="tabindicatorcolor">#FF000000</color>
     <color name="blue">#1F54C3</color>
+    <color name="transparent">#0000</color>
     <color name="dark_blue">#0D207F</color>
 </resources>
