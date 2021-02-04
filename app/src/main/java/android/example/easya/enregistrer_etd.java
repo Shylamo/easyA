@@ -30,25 +30,6 @@ public class enregistrer_etd extends AppCompatActivity {
         regpassword = findViewById(R.id.password_etd);
     //    signup = findViewById(R.id.bouton_enregistrer);
         regnum = findViewById(R.id.num_etd);
-
-      /*  signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rootNode = FirebaseDatabase.getInstance();
-                reference = rootNode.getReference("etd");
-
-                //From EditText to String
-                String name = regnom.getText().toString();
-                String mail = regmail.getText().toString();
-                String password = regpassword.getText().toString();
-                String num = regnum.getText().toString();
-
-                etudiants etudiant = new etudiants(name, mail, num, password);
-
-                //inserer les valeurs pour chaque etudiant num est unique --> id_etd
-                reference.child(num).setValue(etudiant);
-            }
-        });*/
     }
 
     //Validation des donnees etd
