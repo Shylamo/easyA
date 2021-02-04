@@ -100,6 +100,9 @@ public class enregistrer_etd extends AppCompatActivity {
             String num = regnum.getText().toString();
             etudiants etudiant = new etudiants(name, mail, num, password);
 
+                rootNode =FirebaseDatabase.getInstance();
+                reference = rootNode.getReference("etd");
+
             //inserer les valeurs pour chaque etudiant num est unique --> id_etd
             reference.child(num).setValue(etudiant);
 
