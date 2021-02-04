@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyA">
-        <activity android:name=".enregistrer_vol"></activity>
+        <activity android:name=".succes_reinitialisation"></activity>
+        <activity android:name=".nouveau_passe" />
+        <activity android:name=".forget_password" />
+        <activity android:name=".enregistrer_vol" />
         <activity android:name=".enregistrer_etd" />
         <activity android:name=".MainActivity" />
         <activity android:name=".inscription_fragment" />

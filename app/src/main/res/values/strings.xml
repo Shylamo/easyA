@@ -5,7 +5,7 @@
     <string name="btn_volontaire">Volontaire</string>
     <string name="adresse_mail">Adresse mail</string>
     <string name="se_souvenir_de_moi">Se souvenir de moi</string>
-    <string name="mot_de_passe_oublie">Mot de passe oublié?</string>
+    <string name="mot_de_passe_oublie">Mot de passe oublié</string>
 
     <string-array name="Niveaux">
         <item>           </item>
