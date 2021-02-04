@@ -63,8 +63,7 @@ public class enregistrer_etd extends AppCompatActivity {
 
     private Boolean validate_password() {
         String val = regpassword.getText().toString();
-        String password_syntaxe = ".{4,}" +//au moins 4 caracteres
-                "(?=.*[a-zA-Z])";//any letter
+        String password_syntaxe = ".{4,}"; //au moins 4 caracteres n'impote lesquels
 
         if (val.isEmpty()) {
             regpassword.setError("Champs obligatoire");//affiche le message d'erreur si le champs est vide
