@@ -1,16 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".enregistrer_vol">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enregistrement du volontaire"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="161dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/logo_app"></ImageView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="30dp">
+
+            //////NOM COMPLET
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/ic_name"
+                app:startIconTint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nom_etd"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="Nom complet"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            ////NUMERO APOGE ---> ID_ETD
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/ic_name"
+                app:startIconTint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/num_etd"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="Numero d'apogee"
+                    android:inputType="number"
+                    android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            ////NIVEAU VOLONTAIRE
+            ////// NIVEAU ETD
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/selectionne_niveau_etd"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="Selectionne ton niveau"
+                android:textColor="@color/black"
+                android:textSize="14sp"></com.google.android.material.textview.MaterialTextView>
+
+            <ImageView
+                android:id="@+id/grade_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-40dp"
+                app:srcCompat="@drawable/ic_grade_foreground"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Spinner
+                android:id="@+id/niveau_volontaire"
+                style="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:entries="@array/Niveaux_vol"
+                android:spinnerMode="dialog"
+                android:splitMotionEvents="true"
+
+
+                ></Spinner>
+
+            ////CHOIX DE MODULES
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Choix de modules"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/modules_maths"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="Maths"
+                        android:textColor="@color/white"
+                        android:textStyle="bold|italic"
+                        app:backgroundTint="@color/red"></Button>
+
+                    <TextView
+                        android:id="@+id/selected_maths_mod"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/modules_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:text="Informatique"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold|italic"
+                        app:backgroundTint="@color/red"
+                        tools:ignore="RtlCompat"></Button>
+
+                    <TextView
+                        android:id="@+id/selected_info_mod"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="100dp"
+                        android:layout_marginTop="5dp"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal"></TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            ////// MAIL ETD
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/ic_mail"
+                app:startIconTint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mail_etd"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="@string/adresse_mail"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            ////// PASSWORD ETD
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconTint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_etd"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="@string/password_etd"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

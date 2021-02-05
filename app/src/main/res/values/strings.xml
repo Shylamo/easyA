@@ -17,4 +17,25 @@
         <item>Doctorats Maths et informatiques</item>
     </string-array>
 
+    <string-array name="Niveaux_vol">
+        <item>       </item>
+        <item>Licence</item>
+        <item>Master</item>
+        <item>Doctorant</item>
+    </string-array>
+
+
+    <string-array name="Maths">
+        <item>Algebre</item>
+        <item>Analyse</item>
+        <item>Probabilite</item>
+        <item>Doctorant</item>
+    </string-array>
+
+    <string-array name="Informatique">
+        <item>Structure de donnees en C</item>
+        <item>POO JAVA</item>
+        <item>Programmation Mobile</item>
+        <item>Langage C#</item>
+    </string-array>
 </resources>
