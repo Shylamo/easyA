@@ -13,6 +13,7 @@
     android:layout_height="100dp"
     android:background="@drawable/logo_app"
     ></ImageView>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -97,35 +98,12 @@
             android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
+
         ////// NIVEAU ETD
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/selectionne_niveau_etd"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:gravity="center"
-        android:paddingTop="20dp"
-        android:text="Selectionne ton niveau"
-        android:textColor="@color/black"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:textSize="14sp"></com.google.android.material.textview.MaterialTextView>
-
-    <ImageView
-        android:id="@+id/grade_icon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="-40dp"
-        app:srcCompat="@drawable/ic_grade_foreground"
-        tools:ignore="VectorDrawableCompat" />
-
     <Spinner
+        android:id="@+id/niveau_etd"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:entries="@array/Niveaux"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:spinnerMode="dialog"
-        android:splitMotionEvents="true"
         >
     </Spinner>
 

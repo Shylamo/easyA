@@ -38,4 +38,28 @@
         <item>Programmation Mobile</item>
         <item>Langage C#</item>
     </string-array>
+
+    ///LISTE DES MATHS
+    <string-array name="Maths_LC">
+        <item>maths pour licence</item>
+    </string-array>
+    <string-array name="Maths_MA">
+        <item>info pour master</item>
+    </string-array>
+    <string-array name="Maths_DOC">
+        <item>maths pour doc</item>
+    </string-array>
+
+    <string-array name="Info_LC">
+        <item>info pour licence</item>
+    </string-array>
+    <string-array name="Info_MA">
+        <item>info pour master</item>
+    </string-array>
+
+    <string-array name="Info_DOC">
+        <item>info pour doc</item>
+    </string-array>
+
+
 </resources>
