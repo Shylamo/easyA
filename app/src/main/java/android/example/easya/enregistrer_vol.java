@@ -112,7 +112,7 @@ public class enregistrer_vol extends AppCompatActivity {
         });
 
         //Recuperer la liste des modules en maths et info du String.xml
-        listModInfo = getResources().getStringArray(R.array.Informatique);
+       // listModInfo = getResources().getStringArray(R.array.Informatique);
 
         //ATTRIBUER A CHAQUE NIVEAU D'ETUDE LA LISTE DES MODULES EN MATHS
     //    chekedmodMaths = new boolean[listModMaths.length];//le nombre des elements coche ne va pas depasser la taille de list des modules

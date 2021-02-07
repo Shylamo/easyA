@@ -64,7 +64,6 @@
                 style="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:entries="@array/Niveaux_vol"
                 android:spinnerMode="dialog"
                 android:splitMotionEvents="true"
 

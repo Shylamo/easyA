@@ -23,7 +23,6 @@ public class enregistrer_etd extends AppCompatActivity {
 
     //Variables
     TextInputEditText regnom, regmail, regpassword, regnum;//reg for registration
-    Button signup;
     Spinner regniveau_etd;
 
     FirebaseDatabase rootNode;
@@ -47,8 +46,7 @@ public class enregistrer_etd extends AppCompatActivity {
         niveau_etd.add("Licence SMA");
         niveau_etd.add("Master STRI");
         niveau_etd.add("Master ISI");
-        niveau_etd.add("Master IEREE");
-        niveau_etd.add("Doctorat");
+        niveau_etd.add("Doctorat Maths et Informatique");
 
         //styler le spinner
         ArrayAdapter<String> data;
