@@ -41,6 +41,9 @@ public class enregistrer_vol extends AppCompatActivity {
     String[] listModMaths;
 
     //LISTE DES MODULES D'INFO
+    String[] listModInfo_lc;
+    String[] listModInfo_ma;
+    String[] listModInfo_doc;
     String[] listModInfo;
 
     //les element selectionne considere true
@@ -76,9 +79,14 @@ public class enregistrer_vol extends AppCompatActivity {
         data.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         //RECUPERATION DES LISTES DE MODULES SELON LE NIVEAU DU STRING.XML
+        //////////MATHS//////////////////////////////////////////////////////
         listModMaths_lc = getResources().getStringArray(R.array.Maths_LC);
         listModMaths_ma = getResources().getStringArray(R.array.Maths_MA);
         listModMaths_doc = getResources().getStringArray(R.array.Maths_DOC);
+        //////////INFORMATIQUE///////////////////////////////////////////////
+        listModInfo_lc = getResources().getStringArray(R.array.Info_LC);
+        listModInfo_ma = getResources().getStringArray(R.array.Info_MA);
+        listModInfo_doc = getResources().getStringArray(R.array.Info_DOC);
 
         //Attacher data au spinnner (niveau etd)
         regniveau_vol.setAdapter(data);
@@ -95,11 +103,20 @@ public class enregistrer_vol extends AppCompatActivity {
                     //Afficher toast message du niveau selectionne
                     Toast.makeText(parent.getContext(), "Vous etes en " + niv, Toast.LENGTH_SHORT).show();
                     if(parent.getItemAtPosition(position).toString().equals("Licence"))
-                        listModMaths= getResources().getStringArray(R.array.Maths_LC);
+                    {
+                        listModMaths= listModMaths_lc;
+                        listModInfo= listModInfo_lc;
+                    }
                     else if(parent.getItemAtPosition(position).equals("Master"))
-                        listModMaths= getResources().getStringArray(R.array.Maths_MA);
+                    {
+                        listModMaths=listModMaths_ma;
+                        listModInfo= listModInfo_ma;
+                    }
                     else
-                        listModMaths= getResources().getStringArray(R.array.Maths_DOC);
+                    {
+                        listModMaths= listModMaths_doc;
+                        listModMaths= listModInfo_doc;
+                    }
                 }
             }
             @Override
@@ -178,6 +195,68 @@ public class enregistrer_vol extends AppCompatActivity {
                 mDialog.show();
             }
         });
+
+        //LES BOUTONS OK CLEAR ALL  ET CANCEL DE LISTE DES MODULES A COCHER
+        mod_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(enregistrer_vol.this);
+                mBuilder.setTitle("Modules : Informatique");
+                mBuilder.setMultiChoiceItems(listModInfo, chekedmodInfo, new DialogInterface.OnMultiChoiceClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int position, boolean isChecked) {
+                        //tester si le module est selectionne
+                        if (isChecked) {
+                            if (!modVol_Info.contains(position))//si l'element courant ne fait partie de la liste des modules selectionne il faut l'ajouter
+                            {
+                                modVol_Info.add(position);
+                            } else //Si l'element selectionne fait partie deja de la liste des modules selectionnees apr le volontaire
+                            {
+                                modVol_Info.remove(position);
+                            }
+                        }
+                    }
+                });
+                //Le bouton OK
+                mBuilder.setCancelable(false);
+                mBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String module_info = "";//Cette chaine de caractere va contenir la liste des modules qui se trouve dans la liste des modules selectionnes
+                        for (int i = 0; i < modVol_Info.size(); i++) {
+                            module_info = module_info + listModInfo[modVol_Info.get(i)];
+                            if (i != modVol_Info.size() - 1)//si l'element a la position i n'est pas le dernier on va faire un retour a la ligne
+                            {
+                                module_info = module_info + "\n ";
+                            }
+                        }
+                        mod_info_selected.setText(module_info);
+                    }
+                });
+                mBuilder.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                mBuilder.setNeutralButton("Clear", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        for (int i = 0; i < chekedmodInfo.length; i++)//Verifier la liste des elements selectionne pour effacer la selection
+                        {
+                            chekedmodInfo[i] = false;
+                            modVol_Info.clear();//clear item in this list
+                            mod_info_selected.setText("");//changer le text des modules selectionnes apres avoir supprimer certains
+                        }
+                    }
+                });
+
+                AlertDialog mDialog = mBuilder.create();
+                mDialog.show();
+            }
+        });
+
 
         // Donner du xml a la l'activite "enregistrer_vol"
         regnom_vol = findViewById(R.id.nom_vol);
