@@ -187,6 +187,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Enregistrer"
+                android:onClick="register_vol"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
         </LinearLayout>

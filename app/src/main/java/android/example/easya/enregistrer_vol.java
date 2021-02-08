@@ -115,7 +115,7 @@ public class enregistrer_vol extends AppCompatActivity {
                     else
                     {
                         listModMaths= listModMaths_doc;
-                        listModMaths= listModInfo_doc;
+                        listModInfo= listModInfo_doc;
                     }
                 }
             }
@@ -127,13 +127,6 @@ public class enregistrer_vol extends AppCompatActivity {
                 }
             }
         });
-
-        //Recuperer la liste des modules en maths et info du String.xml
-       // listModInfo = getResources().getStringArray(R.array.Informatique);
-
-        //ATTRIBUER A CHAQUE NIVEAU D'ETUDE LA LISTE DES MODULES EN MATHS
-    //    chekedmodMaths = new boolean[listModMaths.length];//le nombre des elements coche ne va pas depasser la taille de list des modules
-    //    chekedmodInfo = new boolean[listModInfo.length];
 
         //LES BOUTONS OK CLEAR ALL  ET CANCEL DE LISTE DES MODULES A COCHER
         mod_maths.setOnClickListener(new View.OnClickListener() {
@@ -266,27 +259,90 @@ public class enregistrer_vol extends AppCompatActivity {
         regniveau_vol = findViewById(R.id.niveau_volontaire);
 
         reglogin= findViewById(R.id.bouton_enregistrer_vol);
-        reglogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rootNode = FirebaseDatabase.getInstance();
-                reference = rootNode.getReference("vol");
-
-                //getting all the values
-                String name = regnom_vol.getText().toString();
-                String mail = regmail_vol.getText().toString();
-                String password = regpassword_vol.getText().toString();
-                String num = regnum_vol.getText().toString();
-                String niveau = regniveau_vol.getSelectedItem().toString();
-                String maths= mod_maths_selected.getText().toString();
-                String info= mod_info_selected.getText().toString();
-                Volontaires volontaire= new Volontaires(name,num,niveau,mail,password,maths,info);
-                reference.child(num).setValue(volontaire);
-
-                //Afficher profil volontaire
-                startActivity(new Intent(enregistrer_vol.this,profil_vol.class));
-            }
-        });
     }
+
+    public void register_vol(View view)
+    {
+
+        rootNode = FirebaseDatabase.getInstance();
+        reference = rootNode.getReference("vol");
+
+        if (!validate_name() | !validate_mail() | !validate_password() | !validate_num())
+            return;
+
+        else
+        {
+
+        //getting all the values
+        String name = regnom_vol.getText().toString();
+        String mail = regmail_vol.getText().toString();
+        String password = regpassword_vol.getText().toString();
+        String num = regnum_vol.getText().toString();
+        String niveau = regniveau_vol.getSelectedItem().toString();
+        String maths= mod_maths_selected.getText().toString();
+        String info= mod_info_selected.getText().toString();
+
+        Volontaires volontaire= new Volontaires(name,num,niveau,mail,password,maths,info);
+        reference.child(num).setValue(volontaire);
+
+        //Afficher profil volontaire
+        startActivity(new Intent(enregistrer_vol.this,profil_vol.class));
+        }
+    }
+
+    //Validation des donnees etd
+    private Boolean validate_name() {
+        String val = regnom_vol.getText().toString();
+        if (val.isEmpty()) {
+            regnom_vol.setError("Champs obligatoire");//affiche le message d'erreur si le champs est vide
+            return false;
+        } else {
+            regnom_vol.setError(null);
+            return true;
+        }
+    }
+    private Boolean validate_mail() {
+        String val = regmail_vol.getText().toString();
+        String mail_syntaxe = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+        if (val.isEmpty()) {
+            regmail_vol.setError("Champs obligatoire");//affiche le message d'erreur si le champs est vide
+            return false;
+        } else if (!val.matches(mail_syntaxe)) {
+            regmail_vol.setError("Adresse mail non valide");//affiche le message d'erreur si la syntaxe du mail est fausse
+            return false;
+        } else {
+            regmail_vol.setError(null);
+            //        nom.setErrorEnabled(false);// remove the error message after
+            return true;
+        }
+    }
+    private Boolean validate_password() {
+        String val = regpassword_vol.getText().toString();
+        String password_syntaxe = ".{4,}"; //au moins 4 caracteres n'impote lesquels
+
+        if (val.isEmpty()) {
+            regpassword_vol.setError("Champs obligatoire");//affiche le message d'erreur si le champs est vide
+            return false;
+        } else if (!val.matches(password_syntaxe)) {
+            regpassword_vol.setError("Mot de passe faible");//affiche le message d'erreur si la syntaxe du mail est fausse
+            return false;
+        } else {
+            regpassword_vol.setError(null);
+            //        nom.setErrorEnabled(false);// remove the error message after
+            return true;
+        }
+    }
+    private Boolean validate_num() {
+        String val = regnum_vol.getText().toString();
+        if (val.isEmpty()) {
+            regnum_vol.setError("Champs obligatoire");//affiche le message d'erreur si le champs est vide
+            return false;
+        } else {
+            regnum_vol.setError(null);
+            return true;
+        }
+    }
+
 }
 

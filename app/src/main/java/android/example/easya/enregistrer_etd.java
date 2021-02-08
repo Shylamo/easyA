@@ -78,9 +78,6 @@ public class enregistrer_etd extends AppCompatActivity {
                 }
             }
         });
-
-
-
     }
 
     //Validation des donnees etd
