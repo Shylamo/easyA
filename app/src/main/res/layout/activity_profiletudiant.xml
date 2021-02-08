@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F4F4"
+    android:hapticFeedbackEnabled="false"
+    tools:context=".profiletudiant">
+
+
+    <TextView
+        android:id="@+id/bienvenu"
+        android:layout_width="161dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="228dp"
+        android:layout_marginRight="228dp"
+        android:layout_marginBottom="439dp"
+        android:text="Bienvenue "
+        android:textColor="#090707"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="177dp"
+        android:layout_height="44dp"
+        android:layout_below="@+id/bienvenu"
+        android:layout_marginTop="-425dp"
+        android:background="@drawable/round_btn"
+        android:drawableTop="@drawable/ic_baseline_chat_24"
+        app:backgroundTint="@color/design_default_color_background" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="196dp"
+        android:layout_height="47dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="-425dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="379dp"
+        android:layout_toEndOf="@+id/button8"
+        android:layout_toRightOf="@+id/button8"
+        android:background="@drawable/round_btn"
+        android:drawableTop="@drawable/ic_baseline_settings_24"
+        android:text="Button"
+        app:backgroundTint="@color/design_default_color_background" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="17dp"
+        android:layout_height="66dp"
+        android:layout_below="@+id/button8"
+        android:layout_marginTop="24dp"
+        android:background="#213BCA"
+        android:textColorHint="#8E1B1B" />
+
+    <Button
+        android:id="@+id/textView3"
+        android:layout_width="217dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/button8"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:drawableEnd="@drawable/ic_baseline_library_books_24"
+        android:drawableRight="@drawable/ic_baseline_library_books_24"
+        android:gravity="bottom|clip_horizontal|center|top"
+        android:text="Modules"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#0E0D0D"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/cardview_light_background" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="309dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginRight="-10dp"
+        android:layout_marginBottom="496dp"
+        android:text="Chaimae El filali"
+        android:textColor="#070000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/soustraction_a" />
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginRight="59dp"
+        android:layout_marginBottom="574dp"
+        app:srcCompat="@drawable/user" />
+
+    <Button
+        android:id="@+id/math"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="190dp"
+        android:layout_marginRight="190dp"
+        android:layout_marginBottom="219dp"
+        android:background="@drawable/round_btn"
+        android:text="mathematique"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:backgroundTint="@color/cardview_light_background" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginRight="188dp"
+        android:layout_marginBottom="142dp"
+        android:background="@drawable/round_btn"
+        android:text="Informatique"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        app:backgroundTint="@color/cardview_light_background" />
+
+
+</RelativeLayout>

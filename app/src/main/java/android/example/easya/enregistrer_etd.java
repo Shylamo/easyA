@@ -2,6 +2,7 @@ package android.example.easya;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ public class enregistrer_etd extends AppCompatActivity {
     //Variables
     TextInputEditText regnom, regmail, regpassword, regnum;//reg for registration
     Button signup;
+    private Button bouton_enregistrerr;
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
@@ -24,13 +26,23 @@ public class enregistrer_etd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enregistrer_etd);
+        bouton_enregistrerr= (Button) findViewById(R.id.bouton_enregistrerr);
+        bouton_enregistrerr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openprofiletudiant();
+            }
+        });
 
-        regnom = findViewById(R.id.nom_etd);
-        regmail = findViewById(R.id.mail_etd);
-        regpassword = findViewById(R.id.password_etd);
-    //    signup = findViewById(R.id.bouton_enregistrer);
-        regnum = findViewById(R.id.num_etd);
+
+
     }
+    public void openprofiletudiant() {
+        Intent intent= new Intent(this, profiletudiant.class);
+        startActivity(intent);
+
+    }
+
 
     //Validation des donnees etd
     private Boolean validate_name() {
