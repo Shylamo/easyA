@@ -7,35 +7,94 @@
     <string name="se_souvenir_de_moi">Se souvenir de moi</string>
     <string name="mot_de_passe_oublie">Mot de passe oublié</string>
 
-    <string-array name="Niveaux">
-        <item>           </item>
-        <item>Licence SMI</item>
-        <item>Licence SMA</item>
-        <item>Master STRI</item>
-        <item>Master ISI </item>
-        <item>Master EIREE</item>
-        <item>Doctorats Maths et informatiques</item>
-    </string-array>
-
-    <string-array name="Niveaux_vol">
-        <item>       </item>
-        <item>Licence</item>
-        <item>Master</item>
-        <item>Doctorant</item>
-    </string-array>
-
-
-    <string-array name="Maths">
-        <item>Algebre</item>
+    ///LISTE DES MATHS
+    <string-array name="Maths_LC">
         <item>Analyse</item>
-        <item>Probabilite</item>
-        <item>Doctorant</item>
+        <item>Analyse Numerique</item>
+        <item>Algebre</item>
+        <item>Proabilites et Statistiques</item>
+        <item>Analyse fonctionnelle</item>
+        <item>Equations différentielles </item>
+        <item>Contrôle optimal</item>
+    </string-array>
+    <string-array name="Maths_MA">
+        <item>Théorie des nombres et applications</item>
+        <item>Théorie de la décision</item>
+        <item>Méthodes Numériques</item>
+        <item>Les processus aléatoires et modélisation</item>
+        <item>Traitement du  signal</item>
+        <item>Théorie de l’information et codage</item>
+    </string-array>
+    <string-array name="Maths_DOC">
+        <item>Théorie des nombres et applications</item>
+        <item>Théorie de la décision</item>
+        <item>Méthodes Numériques</item>
+        <item>Les processus aléatoires et modélisation</item>
+        <item>Traitement du signal</item>
+        <item>Théorie de l’information et codage</item>
+        <item>Analyse</item>
+        <item>Analyse Numerique</item>
+        <item>Algebre</item>
+        <item>Proabilites et Statistiques</item>
+        <item>Analyse fonctionnelle</item>
+        <item>Equations différentielles </item>
+        <item>Contrôle optimal</item>
     </string-array>
 
-    <string-array name="Informatique">
-        <item>Structure de donnees en C</item>
-        <item>POO JAVA</item>
-        <item>Programmation Mobile</item>
-        <item>Langage C#</item>
+    ///LISTE DES INFO
+    <string-array name="Info_LC">
+        <item>Introduction a l informatique</item>
+        <item>Algorithmique</item>
+        <item>Système d exploitation</item>
+        <item>Technologie du web</item>
+        <item>Structures de donnees</item>
+        <item>Architecture des ordinateurs</item>
+        <item>Bases de donnees</item>
+        <item>Compilation</item>
+        <item>Reseaux</item>
+        <item>Recherche operationnelle</item>
+        <item>Conception oriente objet : UML</item>
+        <item>Programmation oriente objet: C++</item>
+        <item>Base de donnees Oracle</item>
+        <item>JAVA Entreprise</item>
+        <item>Developpement WEB Dynamique</item>
+        <item>Sécurité  informatique</item>
+    </string-array>
+
+    <string-array name="Info_MA">
+        <item>Programmation 1 (C++)</item>
+        <item>Programmation 2 (Java)</item>
+        <item>Sécurité des réseaux mobiles</item>
+        <item>Programmation mobile</item>
+        <item>Intelligence artificielle</item>
+        <item>Réseaux informatiques</item>
+        <item>Modélisation Objet avec UML</item>
+        <item> Programmation en python</item>
+        <item>Développement web Front End</item>
+        <item>Développement web Back End</item>
+        <item>Développement Mobile I</item>
+        <item>Base de données avancées</item>
+        <item>architecture distribuee jee</item>
+        <item>Sécurité Informatique</item>
+        <item>Développement Mobile II</item>
+        <item>Software Security</item>
+        <item>Big Data et Machine Learning</item>
+        <item>Web Sémantique</item>
+        <item>Méthodologie de recherche scientifique</item>
+    </string-array>
+
+    <string-array name="Info_DOC">
+        <item>Développement Mobile</item>
+        <item>Software Security</item>
+        <item>Big Data et Machine Learning</item>
+        <item>Web Sémantique</item>
+        <item>Méthodologie de recherche scientifique</item>
+        <item>Base de données</item>
+        <item>Modélisation Objet avec UML</item>
+        <item>Programmation en python</item>
+        <item>Développement web Full-Stack</item>
+        <item>Programmation en (C++)</item>
+        <item>Programmation en (Java)</item>
+        <item>Sécurité des réseaux mobiles</item>
     </string-array>
 </resources>

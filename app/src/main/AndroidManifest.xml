@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="android.example.easya">
+    package="android.example.easya"
+    android:installLocation="preferExternal">
 
     <application
         android:allowBackup="true"
@@ -9,10 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyA">
-        <activity android:name=".moduleinfo"></activity>
-        <activity android:name=".modulemath" />
-        <activity android:name=".profiletudiant" />
-        <activity android:name=".profiletd" />
+        <activity android:name=".profil_vol"></activity>
+        <activity android:name=".profil_etd" />
         <activity android:name=".succes_reinitialisation" />
         <activity android:name=".nouveau_passe" />
         <activity android:name=".forget_password" />
