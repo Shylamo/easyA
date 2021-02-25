@@ -10,7 +10,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:orientation="vertical"
         android:padding="30dp">
 
@@ -22,11 +21,11 @@
             app:startIconTint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/mail_user"
+                android:id="@+id/num_user"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:hint="@string/adresse_mail"
-                android:inputType="textEmailAddress"
+                android:hint="Numero d'apoge"
+                android:inputType="number"
                 android:paddingLeft="80dp"
                 android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
 
@@ -43,13 +42,36 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password_user"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:hint="Mot de Passe"
                 android:inputType="textPassword"
                 android:textColor="@color/black">
 
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_grp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/etd"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/dark_blue"
+                android:text="Etudiant"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/vol"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="100dp"
+                android:text="Volontaire"
+                android:buttonTint="@color/dark_blue"
+                ></RadioButton>
+        </RadioGroup>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -58,6 +80,7 @@
 
             <CheckBox
                 style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                android:id="@+id/remember_me"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/black"
@@ -83,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="30dp"
             android:text="Se connecter"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />

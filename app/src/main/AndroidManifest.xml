@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="android.example.easya">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,16 +13,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyA">
-        <activity android:name=".profil_vol"></activity>
+        <activity android:name=".pas_de_vol"></activity>
+        <activity android:name=".Envoie_mail_etd" />
+        <activity android:name=".Envoie_mail" />
+        <activity android:name=".Liste_volontaires" />
+        <activity
+            android:name=".edit_profil_vol"
+            android:label="Editer le profil"
+            android:parentActivityName=".profil_vol" />
+        <activity android:name=".edit_profil_etd" />
+        <activity android:name=".profil_vol" />
         <activity android:name=".profil_etd" />
-        <activity android:name=".succes_reinitialisation" />
-        <activity android:name=".nouveau_passe" />
         <activity android:name=".forget_password" />
         <activity android:name=".enregistrer_vol" />
         <activity android:name=".enregistrer_etd" />
         <activity android:name=".MainActivity" />
         <activity android:name=".inscription_fragment" />
         <activity android:name=".identification_fragment" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
         <activity android:name=".Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

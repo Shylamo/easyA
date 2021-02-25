@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Liste_volontaires">
+
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_back"
+        android:id="@+id/back"
+        android:onClick="back_profil_etd"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/en_tete_liste_vol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="Liste des volontaires"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/en_tete_liste_vol"
+        android:layout_marginTop="3dp"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/trouver_volontaire"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

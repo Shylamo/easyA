@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:elevation="5dp"
+    android:orientation="vertical"
+    app:cardUseCompatPadding="true"
+    style="@style/Widget.MaterialComponents.CardView"
+           >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/barre_modules"
+        android:layout_margin="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:src="@drawable/profile_image" />
+        <ImageView
+                    android:id="@+id/user_online_status"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/online"
+                    android:visibility="invisible"/>
+        <TextView
+                android:id="@+id/user_niveau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Niveau"
+                android:textSize="16sp"
+                android:layout_below="@+id/user_name"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/profile_image"
+                android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nom"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/profile_image"
+            android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/user_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mail"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/user_niveau"
+                android:layout_toRightOf="@+id/profile_image"
+                android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -29,7 +29,7 @@ enregistrer_vol extends AppCompatActivity {
     TextInputEditText regnom_vol,regnum_vol,regmail_vol,regpassword_vol;
 
     Spinner regniveau_vol;
-    Button mod_maths, mod_info,reglogin;
+    Button mod_maths, mod_info;
     //text des modules selectionnes par le volontaire pour chaque discipline
     TextView mod_maths_selected, mod_info_selected;
 
@@ -96,13 +96,12 @@ enregistrer_vol extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
-                if (parent.getItemAtPosition(position).equals("Seclectionnez votre niveau d'etude")) {
+                if (parent.getItemAtPosition(position).equals("Selectionnez votre niveau d'etude")) {
                     //On ne va rien faire
                 } else {
                     //ON selectionne un niveau
                     String niv = parent.getItemAtPosition(position).toString();
-                    //Afficher toast message du niveau selectionne
-                    Toast.makeText(parent.getContext(), "Vous etes en " + niv, Toast.LENGTH_SHORT).show();
+
                     if(parent.getItemAtPosition(position).toString().equals("Licence"))
                     {
                         listModMaths= listModMaths_lc;
@@ -250,13 +249,13 @@ enregistrer_vol extends AppCompatActivity {
             }
         });
 
-
-        // Donner du xml a la l'activite "enregistrer_vol"
+        // Donnees du xml a la l'activite "enregistrer_vol"
         regnom_vol = findViewById(R.id.nom_vol);
         regnum_vol = findViewById(R.id.num_vol);
         regpassword_vol = findViewById(R.id.password_vol);
         regmail_vol = findViewById(R.id.mail_vol);
         regniveau_vol = findViewById(R.id.niveau_volontaire);
+
     }
     //Validation des donnees etd
     private Boolean validate_name() {
@@ -332,7 +331,8 @@ enregistrer_vol extends AppCompatActivity {
             reference.child(num).setValue(volontaire);
 
             //Afficher profil volontaire
-            startActivity(new Intent(enregistrer_vol.this,profil_vol.class));
+            startActivity(new Intent(enregistrer_vol.this,MainActivity.class));
+            finish();
 
         }
     }

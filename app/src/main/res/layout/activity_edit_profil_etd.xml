@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".edit_profil_etd">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/logo_app"
+        ></ImageView>
+    <ImageButton
+        android:id="@+id/back_profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_back"
+        android:backgroundTint="@color/transparent"
+        tools:ignore="VectorDrawableCompat"
+        android:onClick="back_profil_etd"/>
+
+
+    <TextView
+        android:id="@+id/test_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="78dp"
+        android:paddingVertical="20dp"
+        android:gravity="center_horizontal"
+        android:text="Informations Personnelles"
+        android:textColor="@color/grey"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="210dp"
+        android:orientation="vertical"
+        >
+        ////// MAIL ETD
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_mail"
+            app:startIconTint="@color/black"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nv_mail_etd"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/adresse_mail"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        ////// PASSWORD ETD
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconDrawable="@drawable/ic_lock"
+            app:startIconTint="@color/black"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nv_password_etd"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/password_etd"
+                android:inputType="textPassword"
+                android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        ////// NIVEAU ETD
+        <Spinner
+            android:id="@+id/nv_niveau_etd"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            >
+        </Spinner>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/enregistrer_modif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/niveau_etd"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="25dp"
+        android:foregroundGravity="bottom"
+        android:text="Enregistrer"
+        android:textColor="@color/white"
+        tools:ignore="UnknownId"></Button>
+
+</RelativeLayout>

@@ -1,7 +1,9 @@
 package android.example.easya;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,9 +13,17 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +37,7 @@ public class enregistrer_etd extends AppCompatActivity {
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,9 +89,6 @@ public class enregistrer_etd extends AppCompatActivity {
                 }
             }
         });
-
-
-
     }
 
     //Validation des donnees etd
@@ -138,22 +146,50 @@ public class enregistrer_etd extends AppCompatActivity {
     }
     //Enregistrer les donnees etd dans le FireBase en cliquant sur "enregistrer"
     public void register_etd(View view) {
+
+        rootNode =FirebaseDatabase.getInstance();
+        reference = rootNode.getReference("etd");
+
+        //From EditText to String
+        String name = regnom.getText().toString();
+        String mail = regmail.getText().toString();
+        String password = regpassword.getText().toString();
+        String num = regnum.getText().toString();
+        String niveau = regniveau_etd.getSelectedItem().toString();
+        etudiants etudiant = new etudiants(name, mail, num, password,niveau);
+
         if (!validate_name() | !validate_mail() | !validate_password() | !validate_num())
+        {
             return;
-            //From EditText to String
+        }
 
-            String name = regnom.getText().toString();
-            String mail = regmail.getText().toString();
-            String password = regpassword.getText().toString();
-            String num = regnum.getText().toString();
-            String niveau = regniveau_etd.getSelectedItem().toString();
-            etudiants etudiant = new etudiants(name, mail, num, password,niveau);
+        Query CheckUser = FirebaseDatabase.getInstance().getReference("etd").orderByChild("numApogee").equalTo(num);
+        CheckUser.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot)
+            {
 
-                rootNode =FirebaseDatabase.getInstance();
-                reference = rootNode.getReference("etd");
+                String num_user=snapshot.child("numApogee").getValue(String.class);
+                if(num_user.equals(num))
+                {
+                    Toast.makeText(enregistrer_etd.this, "Ce compte est déjà existant!!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else
+                {
+                    //inserer les valeurs pour chaque etudiant num est unique --> id_etd
+                    reference.child(num).setValue(etudiant);
+                    startActivity(new Intent(enregistrer_etd.this,MainActivity.class));
+                    finish();
+                }
+            }
 
-            //inserer les valeurs pour chaque etudiant num est unique --> id_etd
-            reference.child(num).setValue(etudiant);
+            @Override
+            public void onCancelled(@NonNull DatabaseError error)
+            {
+
+            }
+        });
 
     }
 }

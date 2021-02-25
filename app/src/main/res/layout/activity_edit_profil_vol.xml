@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".edit_profil_vol">
+
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/back_profil"
+        android:layout_marginTop="20dp"
+    android:background="@drawable/logo_app"></ImageView>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_back"
+        android:layout_gravity="left"
+        android:onClick="back_profil_vol"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/test_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Informations Personnelles"
+        android:textColor="@color/grey"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="90dp"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            ////// MAIL ETD
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/ic_mail"
+                app:startIconTint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mail_vol"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="@string/adresse_mail"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            ////// PASSWORD ETD
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconTint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_vol"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="@string/password_etd"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            ////NIVEAU VOLONTAIRE
+
+            <Spinner
+                android:id="@+id/niveau_vol"
+                style="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:spinnerMode="dialog"
+                android:splitMotionEvents="true"></Spinner>
+
+            ////CHOIX DE MODULES
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Choix de modules"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/mod_maths"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="Maths"
+                        android:textColor="@color/white"
+                        android:textStyle="bold|italic"
+                        app:backgroundTint="@color/red"></Button>
+
+                    <TextView
+                        android:id="@+id/selected_maths_mod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:hint="Selectionne tes modules"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/mod_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Informatique"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold|italic"
+                        app:backgroundTint="@color/red"
+                        tools:ignore="RtlCompat"></Button>
+
+                    <TextView
+                        android:id="@+id/selected_info_mod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:hint="Selectionne tes modules"
+                        android:textAlignment="center"></TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bouton_annuler_edit"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="50dp"
+                    android:gravity="start"
+                    android:onClick="go_profil"
+                    android:text="Annuler"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/bouton_enregistrer_vol"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/cardview_default_elevation"
+                    android:text="Enregistrer"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

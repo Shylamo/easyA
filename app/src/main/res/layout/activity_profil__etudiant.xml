@@ -1,17 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".profil_etd">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <ImageButton
+        android:id="@+id/logout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/signout"
+
+        ></ImageButton>
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/heade_red"
         android:layout_height="wrap_content"
-        android:text="PROFIL ETUDIANT"
-        android:textSize="45sp"
+        android:background="@drawable/soustraction_a"></ImageView>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/texto_liste"
+    android:textSize="16sp"
+    ></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleimageid"
+            android:layout_width="141dp"
+            android:layout_height="126dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/user" />
+        <TextView
+            android:id="@+id/bonjour_vol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/grey"
+            android:textSize="25sp"
+        android:textStyle="bold|italic"></TextView>
+
+        <LinearLayout
+            android:id="@+id/barre_vol"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/barre_modules"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/parametres_etd"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/user_settings"
+            android:onClick="edit_etd"></ImageButton>
+
+            <ImageButton
+                android:id="@+id/message_etd"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="200dp"
+                android:background="@drawable/msgs"></ImageButton>
+        </LinearLayout>
+
+        <ExpandableListView
+            android:id="@+id/modules_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"></ExpandableListView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/test"
+        android:textSize="30sp"
         ></TextView>
 
-
-</ScrollView>
+</RelativeLayout>

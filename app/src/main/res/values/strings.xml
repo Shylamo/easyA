@@ -10,7 +10,6 @@
     ///LISTE DES MATHS
     <string-array name="Maths_LC">
         <item>Analyse</item>
-        <item>Analyse Numerique</item>
         <item>Algebre</item>
         <item>Proabilites et Statistiques</item>
         <item>Analyse fonctionnelle</item>
@@ -43,27 +42,24 @@
 
     ///LISTE DES INFO
     <string-array name="Info_LC">
-        <item>Introduction a l informatique</item>
+        <item>Introduction à l informatique</item>
         <item>Algorithmique</item>
         <item>Système d exploitation</item>
         <item>Technologie du web</item>
-        <item>Structures de donnees</item>
+        <item>Structures de données</item>
         <item>Architecture des ordinateurs</item>
         <item>Bases de donnees</item>
         <item>Compilation</item>
         <item>Reseaux</item>
         <item>Recherche operationnelle</item>
         <item>Conception oriente objet : UML</item>
-        <item>Programmation oriente objet: C++</item>
         <item>Base de donnees Oracle</item>
         <item>JAVA Entreprise</item>
         <item>Developpement WEB Dynamique</item>
         <item>Sécurité  informatique</item>
     </string-array>
-
     <string-array name="Info_MA">
-        <item>Programmation 1 (C++)</item>
-        <item>Programmation 2 (Java)</item>
+        <item>Programmation en JAVA</item>
         <item>Sécurité des réseaux mobiles</item>
         <item>Programmation mobile</item>
         <item>Intelligence artificielle</item>
@@ -82,20 +78,28 @@
         <item>Web Sémantique</item>
         <item>Méthodologie de recherche scientifique</item>
     </string-array>
-
     <string-array name="Info_DOC">
-        <item>Développement Mobile</item>
+        <item>Programmation en JAVA</item>
+        <item>Sécurité des réseaux mobiles</item>
+        <item>Programmation mobile</item>
+        <item>Intelligence artificielle</item>
+        <item>Réseaux informatiques</item>
+        <item>Modélisation Objet avec UML</item>
+        <item> Programmation en python</item>
+        <item>Développement web Front End</item>
+        <item>Développement web Back End</item>
+        <item>Développement Mobile I</item>
+        <item>Base de données avancées</item>
+        <item>architecture distribuee jee</item>
+        <item>Sécurité Informatique</item>
+        <item>Développement Mobile II</item>
         <item>Software Security</item>
         <item>Big Data et Machine Learning</item>
         <item>Web Sémantique</item>
         <item>Méthodologie de recherche scientifique</item>
-        <item>Base de données</item>
-        <item>Modélisation Objet avec UML</item>
-        <item>Programmation en python</item>
-        <item>Développement web Full-Stack</item>
-        <item>Programmation en (C++)</item>
-        <item>Programmation en (Java)</item>
-        <item>Sécurité des réseaux mobiles</item>
+        <item>Introduction a l informatique</item>
+        <item>Algorithmique</item>
+        <item>Système d exploitation</item>
     </string-array>
 
 
